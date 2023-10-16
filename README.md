@@ -3,6 +3,7 @@ A WIP python script to convert .bbmodel files to beatsaber environment json
 
 # how to work
 idk to be honest
+this script is a tool for me to use ik its bad
 
 # TODO
 - [ ] README 
