@@ -1,156 +1,34 @@
 [
     {
-        "name": "cube",
-        "box_uv": false,
-        "rescale": false,
-        "locked": false,
-        "render_order": "default",
-        "allow_mirror_modeling": true,
-        "from": [
-            -8,
-            18,
-            -8
+        "geometry": {
+            "type": "cube",
+            "material": "standard"
+        },
+        "scale": [
+            16,
+            16,
+            16
         ],
-        "to": [
-            8,
-            34,
-            8
-        ],
-        "autouv": 1,
-        "color": 5,
-        "origin": [
+        "position": [
             0,
             26,
             0
-        ],
-        "faces": {
-            "north": {
-                "uv": [
-                    0,
-                    0,
-                    16,
-                    16
-                ]
-            },
-            "east": {
-                "uv": [
-                    0,
-                    0,
-                    16,
-                    16
-                ]
-            },
-            "south": {
-                "uv": [
-                    0,
-                    0,
-                    16,
-                    16
-                ]
-            },
-            "west": {
-                "uv": [
-                    0,
-                    0,
-                    16,
-                    16
-                ]
-            },
-            "up": {
-                "uv": [
-                    0,
-                    0,
-                    16,
-                    16
-                ]
-            },
-            "down": {
-                "uv": [
-                    0,
-                    0,
-                    16,
-                    16
-                ]
-            }
-        },
-        "type": "cube",
-        "uuid": "c04242d7-8e46-e05f-153b-ecaa32ebc289"
+        ]
     },
     {
-        "name": "sphere",
-        "box_uv": false,
-        "rescale": false,
-        "locked": false,
-        "render_order": "default",
-        "allow_mirror_modeling": true,
-        "from": [
-            -8,
-            0,
-            -8
-        ],
-        "to": [
-            8,
+        "geometry": {
+            "type": "sphere",
+            "material": "standard"
+        },
+        "scale": [
             16,
-            8
+            16,
+            16
         ],
-        "autouv": 1,
-        "color": 5,
-        "origin": [
+        "position": [
             0,
             0,
             0
-        ],
-        "faces": {
-            "north": {
-                "uv": [
-                    0,
-                    0,
-                    16,
-                    16
-                ]
-            },
-            "east": {
-                "uv": [
-                    0,
-                    0,
-                    16,
-                    16
-                ]
-            },
-            "south": {
-                "uv": [
-                    0,
-                    0,
-                    16,
-                    16
-                ]
-            },
-            "west": {
-                "uv": [
-                    0,
-                    0,
-                    16,
-                    16
-                ]
-            },
-            "up": {
-                "uv": [
-                    0,
-                    0,
-                    16,
-                    16
-                ]
-            },
-            "down": {
-                "uv": [
-                    0,
-                    0,
-                    16,
-                    16
-                ]
-            }
-        },
-        "type": "cube",
-        "uuid": "4994e3c3-6437-4d73-45b0-c39fcb57351e"
+        ]
     }
 ]
