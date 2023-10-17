@@ -7,7 +7,7 @@ Corners2 = []
 Scale = []
 
 # this is chat gpt magic
-def calculate_cube_scale(center, corner1, corner2):
+def calculate_cube_scale(Position, corner1, corner2):
     # Calculate scale values along x, y, and z axes
     scale_x = abs(corner2[0] - corner1[0])
     scale_y = abs(corner2[1] - corner1[1])
@@ -46,6 +46,7 @@ print(Position)
 
 Enviroment = []
 
+# create the json file
 for x in range(len(Scale)):
   Enviroment.append(
       {
@@ -58,9 +59,7 @@ for x in range(len(Scale)):
         }
       )
 
-
-print(Enviroment)
-
+# dump 
 newData = json.dumps(Enviroment, indent=4)
 with open("new.json", "w") as file:
   file.write(newData)
