@@ -30,5 +30,53 @@
             0,
             0
         ]
+    },
+    {
+        "geometry": {
+            "type": "cube",
+            "material": "standard"
+        },
+        "scale": [
+            16,
+            16,
+            16
+        ],
+        "position": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "geometry": {
+            "type": "sphere",
+            "material": "standard"
+        },
+        "scale": [
+            16,
+            16,
+            16
+        ],
+        "position": [
+            0,
+            0,
+            0
+        ]
+    },
+    {
+        "geometry": {
+            "type": "cube",
+            "material": "standard"
+        },
+        "scale": [
+            2,
+            2,
+            2
+        ],
+        "position": [
+            0,
+            0,
+            0
+        ]
     }
 ]
