@@ -8,11 +8,8 @@ scale = []
 uuid = []
 tracks = []
 children = []
-skip = 0
 
 # this is chat gpt magic
-
-
 def calculate_cube_scale(position, corner1, corner2):
     # Calculate scale values along x, y, and z axes
     scale_x = abs(corner2[0] - corner1[0])
@@ -35,47 +32,43 @@ def calculate_multiple_cubes_scales(position, corners1, corners2):
 
 
 # Open file
-with open("model.bbmodel", "r") as model:
-    model = json.load(model)
+with open("model.bbmodel", "r") as model_file:
+    model_data = json.load(model_file)
 
 # Find and store cubes
-elements = model["elements"]
-for i in elements:
-    types.append(i["name"])
-    position.append(i["origin"])
-    corners1.append(i["from"])
-    corners2.append(i["to"])
-    uuid.append(i["uuid"])
+elements = model_data.get("elements", [])
+for element in elements:
+    types.append(element.get("name", ""))
+    position.append(element.get("origin", []))
+    corners1.append(element.get("from", []))
+    corners2.append(element.get("to", []))
+    uuid.append(element.get("uuid", ""))
 
 # find and store tracks
-outliner = model["outliner"]
-for y in outliner:
-    children.append(y["children"])
+outliner = [entry for entry in model_data.get("outliner", []) if isinstance(entry, dict)]
+for entry in outliner:
+    tracks.append(entry.get("name", ""))
+    children.append(entry.get("children", []))
 
-print(outliner)
-print(elements)
-
-print(children)
-print(uuid)
 # Calculate scale values for multiple cubes
 scale = calculate_multiple_cubes_scales(position, corners1, corners2)
 
-Enviroment = []
-
 # create the json file
-for x in range(len(scale)):
+
+Enviroment = []
+for i in range(len(scale)):
     Enviroment.append(
         {
             "geometry": {
-                "type": types[x],
+                "type": types[i],
                 "material": "standard"
             },
-            "scale": scale[x],
-            "position": position[x]
+            "scale": scale[i],
+            "position": position[i],
         }
     )
 
 # dump
-newData = json.dumps(Enviroment, indent=4)
+new_data = json.dumps(Enviroment, indent=4)
 with open("new.json", "w") as file:
-    file.write(newData)
+    file.write(new_data)
